@@ -3,7 +3,7 @@ import { MdStorefront } from "react-icons/md"
 
 export const categories = [
     {
-        label: 'Tüm Ürünler',
+        label: 'Anasayfa',
         icon: MdStorefront
     },
     {

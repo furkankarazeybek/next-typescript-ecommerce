@@ -10,7 +10,20 @@ interface HomeProps {
 }
 
 export default async function Home({ searchParams }: HomeProps) {
-  console.log(searchParams);
+
+
+   
+
+
+  if(searchParams.searchTerm === '[object Object]') 
+  {
+    console.log("evet")
+    searchParams.searchTerm = ''
+
+  }
+
+    console.log("bu search params",searchParams);
+
   const products = await getProducts(searchParams);
 
 
@@ -19,7 +32,7 @@ export default async function Home({ searchParams }: HomeProps) {
  */
   if (products.length === 0) {
     return (
-      <NullData title='Ürün bulumadı. Filtreden çıkmak için "Tüm Ürünler" seçeneğine tıklayın.' />
+      <NullData title='Ürün bulumadı. Filtreden çıkmak için "Anasayfa" seçeneğine tıklayın.' />
     );
   }
 

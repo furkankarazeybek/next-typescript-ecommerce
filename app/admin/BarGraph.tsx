@@ -20,13 +20,13 @@ const BarGraph:React.FC<BarGraphProps> = ({
 }) => {
 
     const labels = data.map(item => item.day)
-    const amounts = data.map(item => item.totalAmount)
+    const amounts = data.map(item => item.totalAmount/100)
 
     const chartData = {
         labels: labels,
         datasets: [
            {
-            label: 'Satış Fiyatı',
+            label: 'Satış Miktarı(TL)',
             data: amounts,
             backgroundColor: 'rgba(75,192,192,0.6)',
             borderColor: 'rgba(75,192,192,1)',

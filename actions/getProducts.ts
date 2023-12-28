@@ -10,7 +10,9 @@ export default async function getProducts(params:IProductParams) {
         const {category,searchTerm} = params;
         let searchString = searchTerm;
 
-        console.log(searchString)
+      
+
+        console.log("aranılan",searchString)
 
         if(!searchTerm) {
             searchString = ''

@@ -18,7 +18,7 @@ const Category:React.FC<CategoryProps> = ({label, icon:Icon, selected}) => {
     const params = useSearchParams()
 
     const handleClick = useCallback(() => {
-        if(label === 'Tüm Ürünler') {
+        if(label === 'Anasayfa') {
             router.push('/')
         }
         else {

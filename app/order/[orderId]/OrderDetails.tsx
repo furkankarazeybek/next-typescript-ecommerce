@@ -23,7 +23,7 @@ const OrderDetails:React.FC<OrderDetailProps>  = ({order}) => {
         </div>
         <div>Sipariş ID: {order.id}</div>
         <div>Toplam Tutar: {" "}
-            <span className="font-bold">{formatPrice(order.amount)}</span>
+            <span className="font-bold">{formatPrice(order.amount / 100)}</span>
         </div>
 
 

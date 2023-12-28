@@ -250,7 +250,7 @@ const AddProductForm = () => {
             <div className="mb-2 font-semibold">Kategori Seç</div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3  max-h[50vh] overflow-y-auto">
                 {categories.map((item) => {
-                    if(item.label === 'Tüm Ürünler') {
+                    if(item.label === 'Anasayfa') {
                         return null;
                     }
 

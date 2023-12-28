@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import queryString from 'query-string';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const SearchBar = () => {
   const router = useRouter();
@@ -20,12 +20,12 @@ const SearchBar = () => {
     }
   });
 
-  
+  const [listenInput, setListenInput] = useState(false)
 
   const onInputChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchTerm = event.target.value;
 
-    // İsterseniz burada bir debounce mekanizması ekleyebilirsiniz
+    setListenInput(true);
 
     const url = queryString.stringifyUrl(
       {
@@ -42,10 +42,13 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    // Component ilk render olduğunda çalışacak
-    // Eğer sadece ilk renderda çalışmasını istemiyorsanız, dependencies listesini boş bırakabilirsiniz.
+   
     const searchTermRegistration = register('searchTerm');
-    onInputChange({ target: { value: searchTermRegistration } } as any);
+    if(listenInput) 
+    { 
+      onInputChange({ target: { value: searchTermRegistration } } as any);
+
+    }
   }, [register]);
 
   return (

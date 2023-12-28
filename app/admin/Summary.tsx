@@ -55,7 +55,7 @@ const Summary:React.FC<SummaryProps> = ({orders,products,users}) => {
 
             const totalSale = orders.reduce((acc,item) => {
                 if(item.status === 'accepted') {
-                    return acc + item.amount
+                    return acc + item.amount / 100
                 }
                 else {
                     return acc;

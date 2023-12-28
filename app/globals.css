@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-button {
+    background-color: #ff5722; /* veya istediğiniz renk */
+    color: #ffffff; /* veya istediğiniz renk */
+  }
+  

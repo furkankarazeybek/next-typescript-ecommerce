@@ -80,6 +80,11 @@ model Load {
   id String    @id @default(auto()) @map("_id") @db.ObjectId
   name String 
   state Boolean
+  description String
+  price Float
+  brand String
+  category String
+  inStock Boolean
 }
 
 model Review {

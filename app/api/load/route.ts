@@ -12,13 +12,18 @@ export async function POST(request: Request) {
    
 
     const body = await request.json();
-    const { name,state } = body;
+    const { name,state,description,price,brand,category,inStock } = body;
 
 
     // Prisma modelinizdeki alanlar ile uyumlu bir orderData nesnesi
        const loadData = {
            name: name,
-           state: state
+           state: state,
+           description: description,
+           price: price,
+           brand :  brand,
+           category: category,
+           inStock: inStock,
         
          
            // Diğer gerekli alanları buraya ekleyebilirsiniz

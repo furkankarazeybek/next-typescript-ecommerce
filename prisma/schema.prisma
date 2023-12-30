@@ -76,6 +76,12 @@ model Product {
     reviews Review[]
 }
 
+model Load {
+  id String    @id @default(auto()) @map("_id") @db.ObjectId
+  name String 
+  state Boolean
+}
+
 model Review {
    id String    @id @default(auto()) @map("_id") @db.ObjectId
    userId String @db.ObjectId

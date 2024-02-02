@@ -24,7 +24,7 @@ const Rebate = () => {
 
 2. İade Prosedürü
 
-2.1. İade talebinde bulunmak için müşteriler, [Şirket Adı]'nin resmi web sitesindeki hesaplarından veya müşteri hizmetleri ile iletişime geçerek taleplerini iletebilirler.
+2.1. İade talebinde bulunmak için müşteriler, Şirket Adı&apos;nın resmi web sitesindeki hesaplarından veya müşteri hizmetleri ile iletişime geçerek taleplerini iletebilirler.
 
 2.2. Müşteri hizmetleri ekibimiz, talepleri en kısa sürede değerlendirecek ve müşteriye geri dönüş sağlayacaktır.
 
@@ -36,11 +36,12 @@ const Rebate = () => {
 
 3.1. Aşağıdaki durumlar söz konusu olduğunda, ürün iadesi kabul edilmemektedir:
 
-Kullanılmış veya kişisel hijyen nedeniyle iade edilemeyen ürünler.
-Orijinal ambalajı eksik veya hasar görmüş ürünler.
+- Kullanılmış veya kişisel hijyen nedeniyle iade edilemeyen ürünler.
+- Orijinal ambalajı eksik veya hasar görmüş ürünler.
+
 4. İade İşlem Süresi
 
-4.1. İade talepleri, [Şirket Adı]'nin müşteri hizmetleri ekibi tarafından 5 iş günü içerisinde değerlendirilir.
+4.1. İade talepleri, Şirket Adı&apos;nın müşteri hizmetleri ekibi tarafından 5 iş günü içerisinde değerlendirilir.
 
 4.2. İade onayı verilen müşterilere, iade işleminin tamamlanması için gerekli talimatlar sağlanır.
 
@@ -49,6 +50,7 @@ Orijinal ambalajı eksik veya hasar görmüş ürünler.
 5.1. İade onayı alınan müşterilere, iade tutarı, ödeme yapılan şekle bağlı olarak 5 iş günü içerisinde iade edilir.
 
 5.2. Kredi kartına iade işlemleri, banka prosedürlerine bağlı olarak birkaç iş günü sürebilir.
+
 
 
        </div>  

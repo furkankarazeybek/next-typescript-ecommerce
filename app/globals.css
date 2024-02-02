@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
+
+
 .custom-button {
-    background-color: #ff5722; /* veya istediğiniz renk */
+    background-color: #131a23; /* veya istediğiniz renk */
     color: #ffffff; /* veya istediğiniz renk */
   }
   
+
+  .swiper-button-next,
+.swiper-button-prev {
+  color: #febb6e; /* Ok rengini istediğiniz renge ayarlayın */
+}

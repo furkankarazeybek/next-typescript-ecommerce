@@ -97,9 +97,9 @@ const LoginForm:React.FC<LoginFormProps> = ({currentUser}) => {
       type="password"
       />
 
-      <Button onClick={handleSubmit(onSubmit)} label= {isLoading ? "Yükleniyor" : "Giriş Yap"} />
+      <Button onClick={handleSubmit(onSubmit)} label= {isLoading ? "Giriş Yapılıyor" : "Giriş Yap"} />
 
-      <p className="text-sm">Hesabın Yok Mu?{" "}  
+      <p className="text-sm">Hesabınız Yok Mu?{" "}  
         <Link className="underline" href="/register">
             Kayıt Ol
         </Link> 

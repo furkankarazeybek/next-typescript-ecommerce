@@ -33,7 +33,7 @@ const UserMenu: React.FC<UserMenuProps> = ({currentUser}) => {
     return ( 
     <>
       <div className="relative z-30">
-        <div onClick={toggleOpen} className="p-2 border-[1px] border-slate-400 flex flex-row items-center gap-1 rounded-full cursor-pointer hover:shadow-md transition text-slate-700">
+        <div onClick={toggleOpen} className="p-2 border-[1px] border-slate-400 flex flex-row items-center gap-1 rounded-full cursor-pointer hover:shadow-md transition text-white">
             {currentUser?.image ? 
             <Image
             src={currentUser?.image}
@@ -48,7 +48,7 @@ const UserMenu: React.FC<UserMenuProps> = ({currentUser}) => {
         { isOpen && (
             <div className="
             absolute 
-            roundend-md 
+            rounded-md 
             shadow-md
             w-[170px]
             bg-white

@@ -113,7 +113,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({currentUser}) => {
       type="password"
       />
 
-      <Button onClick={handleSubmit(onSubmit)} label= {isLoading ? "Yükleniyor" : "Kayıt Ol"} />
+      <Button onClick={handleSubmit(onSubmit)} label= {isLoading ? "Hesap Oluşturuluyor" : "Kayıt Ol"} />
 
       <p className="text-sm">Zaten Hesabınız Var Mı?{" "}  
         <Link className="underline" href="/login">

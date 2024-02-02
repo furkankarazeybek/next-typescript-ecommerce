@@ -52,6 +52,7 @@ model Order {
   city String
   town String
   district String
+  telno String
   userId String @db.ObjectId
   amount Float
   currency String

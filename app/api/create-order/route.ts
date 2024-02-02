@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
-    const { items,name,city,town,district,address } = body;
+    const { items,name,city,town,district,telno,address } = body;
     const total = calculateOrderAmount(items) * 100;
 
     // Prisma modelinizdeki alanlar ile uyumlu bir orderData nesnesi
@@ -39,6 +39,7 @@ export async function POST(request: Request) {
            city: city,
            town: town,
            district: district,
+           telno: telno,
            address: address,
            amount: total,
            currency: 'try',

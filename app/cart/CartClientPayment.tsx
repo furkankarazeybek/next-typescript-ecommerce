@@ -8,7 +8,7 @@ import Button from "../components/Button";
 import Heading from "../components/Heading";
 import ItemContent from "./ItemContent";
 
-const CartClient = () => {
+const CartClientPayment = () => {
     const {cartProducts,handleClearCart,cartTotalAmount } = useCart()
     const router = useRouter();
 
@@ -31,8 +31,7 @@ const CartClient = () => {
           
         
     }
-    return <div>
-        <Heading title="Alışveriş Sepeti" center />
+    return <div className="pt-20">
         <div className="grid grid-cols-5 text-xs gap-4 pb-2 items-center mt-8">
             <div className="col-span-2 justify-self-start">ÜRÜN</div>
             <div className="justify-self-center">FİYAT</div>
@@ -57,7 +56,6 @@ const CartClient = () => {
                  </div>
                 
                  <p className="text-slate-500">KDV ve Tutar Hesaplandı</p>
-                 <Button onClick={handlePayment} label="Siparişi Onayla" />
                  <Link href={"/"} className="text-slate-500 flex items-center gap-1 mt-2">
                         <MdArrowBack />
                     <span>Alışverişe Devam Et</span>
@@ -70,4 +68,4 @@ const CartClient = () => {
     </div>
 }
 
-export default CartClient;
+export default CartClientPayment;

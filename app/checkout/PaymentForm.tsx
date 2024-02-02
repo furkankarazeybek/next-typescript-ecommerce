@@ -8,11 +8,15 @@ import {
   Typography,
 } from '@mui/material';
 import { useRouter } from 'next/navigation';
+import CartClientPayment from '../cart/CartClientPayment';
+
+
 
 const PaymentForm = () => {
-  const { cartTotalAmount, cartProducts } = useCart();
+  const { cartTotalQty,cartTotalAmount, cartProducts } = useCart();
   const [fullName, setFullName] = useState('');
   const [city, setCity] = useState('');
+  const [telno, setTelno] = useState('');
   const [province, setProvince] = useState('');
   const [district, setDistrict] = useState('');
   const [address, setAddress] = useState('');
@@ -37,6 +41,7 @@ const PaymentForm = () => {
           name: fullName,
           city : city,
           town: province,
+          telno: telno,
           address: address,
           district: district,
           total: cartTotalAmount,
@@ -64,10 +69,105 @@ const PaymentForm = () => {
     }
   };
 
+  if(cartTotalQty==0)
+  {
+    return (
+    <>
+    <CartClientPayment />
+    </>)
+  }
+
+
+  const isAnyFieldEmpty = () => {
+    return !fullName || !city || !province || !district || !telno || !address;
+  };
+
   return (
-    <Container>
+    <>
+
+     <div className="lg:hidden">
+       
+       <Typography className="py-10" variant="h2">Sipariş Bilgileri</Typography>
+       
+       <Grid container spacing={2}>
+         <Grid item xs={12} sm={6}>
+           <TextField
+             label="Ad Soyad"
+             variant="outlined"
+             fullWidth
+             value={fullName}
+             onChange={(e) => setFullName(e.target.value)}
+           />
+         </Grid>
+   
+         <Grid item xs={12} sm={6}>
+           <TextField
+             label="Şehir"
+             variant="outlined"
+             fullWidth
+             value={city}
+             onChange={(e) => setCity(e.target.value)}
+           />
+         </Grid>
+   
+         <Grid item xs={12} sm={6}>
+           <TextField
+             label="İlçe"
+             variant="outlined"
+             fullWidth
+             value={province}
+             onChange={(e) => setProvince(e.target.value)}
+           />
+         </Grid>
+   
+         <Grid item xs={12} sm={6}>
+           <TextField
+             label="Mahalle"
+             variant="outlined"
+             fullWidth
+             value={district}
+             onChange={(e) => setDistrict(e.target.value)}
+           />
+         </Grid>
+
+         <Grid item xs={12} sm={6}>
+         <TextField
+            label="Telefon"
+            variant="outlined"
+            fullWidth
+            value={telno}
+            onChange={(e) => setTelno(e.target.value)}
+          />
+          </Grid>
+
+   
+         <Grid item xs={12}>
+           <TextField
+             label="Adres"
+             variant="outlined"
+             fullWidth
+             value={address}
+             onChange={(e) => setAddress(e.target.value)}
+           />
+         </Grid>
+   
+         <Grid item xs={12}>
+         <Button variant="contained" className="custom-button" onClick={handleCheckout} disabled={isAnyFieldEmpty() || loading}
+>
+              {loading ? "Onaylanıyor..." : "Siparişi Onayla" }
+        </Button>
+   
+   
+         </Grid>
+       </Grid>
+       <CartClientPayment />
+     
+     </div>
+
+     <div className="hidden lg:block">
+     <div className='flex'>
+      <div className="px-10">
       <Typography className="py-10" variant="h2">Sipariş Bilgileri</Typography>
-      <Typography className="py-2" variant="body1"><b>Toplam Tutar:</b> {cartTotalAmount} TL</Typography>
 
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
@@ -112,6 +212,25 @@ const PaymentForm = () => {
 
         <Grid item xs={12}>
           <TextField
+            label="Telefon"
+            variant="outlined"
+            fullWidth
+            value={telno}
+            onChange={(e) => {
+              const input = e.target.value;
+        
+              // Only allow up to 10 digits
+              const cleanedInput = input.replace(/\D/g, ''); // Remove non-numeric characters
+        
+              if (cleanedInput.length <= 10) {
+                setTelno(cleanedInput);
+              }
+            }}
+          />
+        </Grid>
+
+        <Grid item xs={12}>
+          <TextField
             label="Adres"
             variant="outlined"
             fullWidth
@@ -121,14 +240,23 @@ const PaymentForm = () => {
         </Grid>
 
         <Grid item xs={12}>
-        <Button variant="contained" className="custom-button" onClick={handleCheckout}>
-          {loading ? "Yükleniyor" : "Siparişi Onayla" }
+        <Button variant="contained" className="custom-button" onClick={handleCheckout} disabled={isAnyFieldEmpty() || loading}>
+          {loading ? "Onaylanıyor..." : "Siparişi Onayla" }
        </Button>
 
 
         </Grid>
       </Grid>
-    </Container>
+      </div>
+      <div className="w-full sm:w-1/2">
+
+      <CartClientPayment />
+      </div>
+    </div>
+
+     </div>
+    </>
+    
   );
 };
 

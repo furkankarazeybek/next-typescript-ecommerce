@@ -1,29 +1,46 @@
+'use client'
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Autoplay from "../../utils/autoplay.mjs"
+import SwiperCore from 'swiper';
+
+import 'swiper/css/autoplay';
+
+SwiperCore.use([Autoplay]);
 
 const HomeBanner = () => {
-    return (
-    <div className="relative bg-gradient-to-r from-sky-500 to-sky-700 mb-8">
-        <div className="mx-auto px-8 py-12 flex flex-col gap-2 md:flex-row items-center justify-evenly">
-            <div className="mb-8 md:mb-0 text-center">
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Aralık İndirimi !</h1>
-                <p className="text-lg md:text-xl text-white mb-2">Seçili ürünlerde indirimlerden yararlanın</p>
-                <p className="text-2xl md:text-5xl text-yellow-400 font-bold">{'%50\'YE VARAN İNDİRİM'}</p>
-            </div>
+  const images = [
+    '/banner1.jpg',
+    '/banner2.jpg',
+  ];
 
-            <div className="w-1/3 relative aspect-video">
-                <Image 
-                src='/banner-image.png'
-                fill
-                alt= 'Banner Image'
-                className="object-contain"
-                />
+  return (
+    <Swiper
+    
+      className="pb-10"
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
 
-            </div>
+      
+    >
+      {images.map((image, index) => (
+        <SwiperSlide key={index}>
+          <Image
+            src={image}
+            width={1920}
+            height={900}
+            layout="responsive"
+            objectFit="cover"
+            alt={`Banner Image ${index + 1}`}
+            style={{ width: '100%', height: '100%', position: 'relative' }}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+};
 
-        </div>
-
-    </div>
-    )
-}
- 
 export default HomeBanner;

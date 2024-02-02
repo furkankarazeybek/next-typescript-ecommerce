@@ -66,7 +66,7 @@ const SearchBar = () => {
   />
   <button
     onClick={() => {}}
-    className="bg-slate-700 hover:opacity-80 text-white py-2 px-4 md:h-10 md:text-sm rounded-r-md"
+    className="bg-[#febb6e] hover:opacity-80 text-black py-2 px-4 md:h-[2.65rem] md:text-sm rounded-r-md"
     >
   Ara
   </button>

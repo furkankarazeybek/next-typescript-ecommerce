@@ -4,12 +4,12 @@ import CheckoutClient from "./CheckoutClient";
 
 const Checkout = () => {
     return ( 
-    <div className="p-8">
-      <Container>
+    <div className="">
+ 
          <FormWrap>
             <CheckoutClient />
          </FormWrap>
-      </Container>  
+ 
     </div> 
     );
 }

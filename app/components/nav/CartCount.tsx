@@ -8,14 +8,14 @@ const CartCount = () => {
     const router = useRouter();
      return ( 
      <div className="relative cursor-pointer" onClick={() => router.push('/cart')}>
-        <div className="text-3xl">
+        <div className="text-3xl text-[#fcba70]">
             <CiShoppingCart />
         </div>
         <span className="
          absolute top-[-10px] 
          right-[-10px]
-         bg-slate-700 
-         text-white 
+         bg-white
+         text-black
          h-6 
          w-6 
          rounded-full

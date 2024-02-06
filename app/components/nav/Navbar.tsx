@@ -37,10 +37,10 @@ const Navbar = async() => {
                
                
                </div>
-               <Link href="/" className={`hidden sm:inline-block font-base text-md text-white`}>Anasayfa</Link>
-               <Link href="/?category=Promosyon%20Diğer" className={`hidden sm:inline-block font-base text-md text-white`}>Diğer Promosyon Ürünler</Link>
-               <Link href="/aboutus" className={`hidden sm:inline-block font-base text-md text-white`}>Hakkımızda</Link>
-               <Link href="/contact" className={`hidden sm:inline-block font-base text-md text-white`}>İletişim</Link>
+               <Link href="/" className={`hidden sm:inline-block font-base text-sm text-white`}>Anasayfa</Link>
+               <Link href="/?category=Promosyon%20Diğer" className={`hidden sm:inline-block font-base text-sm text-white`}>Diğer Promosyon Ürünler</Link>
+               <Link href="/aboutus" className={`hidden sm:inline-block font-base text-sm text-white`}>Hakkımızda</Link>
+               <Link href="/contact" className={`hidden sm:inline-block font-base text-sm text-white`}>İletişim</Link>
      
                
                <div className="flex items-center gap-8 md:gap-12">

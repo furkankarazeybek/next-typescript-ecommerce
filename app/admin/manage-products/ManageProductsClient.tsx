@@ -100,7 +100,7 @@ const ManageProductsClient:React.FC<ManageProductsClientProps> = ({products}) =>
             try {
                 for(const item of images) {
                     if(item.image) {
-                        const imageRef = ref(storage,item.iamge );
+                        const imageRef = ref(storage,item.image );
                         await deleteObject(imageRef)
                         console.log('Resim silindi',item.image);
 

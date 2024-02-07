@@ -14,28 +14,21 @@ const Aboutus = () => {
        </div>
 
        <div className="flex flex-col sm:flex-row">
-       <div className=" w-full sm:w-1/2 py-20 px-10">
+       <div className="w-full sm:w-1/2 py-20 px-10">
+    <p className="py-5">Mg Promosyon, çakmak başta olmak üzere pek çok üründe promosyon ihtiyaçlarını karşılamaktadır. Toptan satış fırsatı ile promosyon ürünlerde Mg Promosyon müşterilerine kaliteli çözümler sunmaktadır.</p>
 
-        Mg Promosyon olarak, müşterilerimize yaratıcı, kaliteli ve etkileyici promosyon ürünleri sunan bir firma olarak gurur duyuyoruz. Firmamız, uzun yıllardır sektörde edindiğimiz deneyim ve uzmanlık ile öne çıkmaktadır.
+    <p className="py-5">Biz Mg Promosyon olarak, en iyi promosyon çözümlerini sunmayı ilke edinen bir ekibiz. Hızla değişen sektörel dinamiklere ve müşteri beklentilerine uyum sağlayabilme yeteneğimizle tanınırız. Geniş ürün yelpazemiz, promosyon kalemlerden çakmaklara, tekstil ürünlerinden ofis malzemelerine kadar birçok ürünü kapsamaktadır.</p>
 
-      
-      
-      Mg Promosyon, müşterilerimize en iyi promosyon çözümlerini sunmayı ilke edinen bir ekip tarafından kurulmuştur. Sektördeki değişimlere ve müşteri beklentilerine hızla adapte olabilen dinamik bir yapıya sahibiz. Promosyon kalem, promosyon çakmak, toptan çakmak ve diğer birçok promosyon ürünleri konusundaki geniş ürün yelpazemizle müşterilerimizin ihtiyaçlarına cevap veriyoruz.
-      
-    
-      
-      Kalite ve Dayanıklılık: Mg Promosyon olarak, ürünlerimizin kalitesinden ödün vermiyoruz. Müşterilerimizin markalarını en iyi şekilde temsil etmelerini sağlamak için yüksek kaliteli malzemeler kullanıyoruz.
-      
-      Yaratıcılık ve Tasarım: Promosyon ürünlerimizin tasarımında yaratıcılığa önem veriyoruz. Özel logolar, marka renkleri ve dikkat çekici grafiklerle müşterilerimizin etkileyici bir marka deneyimi yaşamalarını sağlıyoruz.
-      
-      Çeşitlilik ve Esneklik: Mg Promosyon olarak, müşterilerimize geniş bir ürün yelpazesi sunuyoruz. Promosyon kalem, promosyon çakmak, tekstil ürünleri, ofis malzemeleri ve daha fazlası arasından seçim yapabilir ve ihtiyaçlarınıza özel çözümler bulabilirsiniz.
-      
-      Hızlı ve Güvenilir Hizmet: Siparişlerinizi en kısa sürede teslim etmek için çalışıyoruz. Müşteri memnuniyetini ön planda tutarak, güvenilir ve hızlı bir hizmet sunuyoruz.
-      
-    
-      
-      Mg Promosyon olarak, iş ortaklarımıza en iyi promosyon çözümlerini sunma misyonuyla hareket ediyoruz. Siz de markanızı öne çıkarmak, müşterilerinize unutulmaz deneyimler yaşatmak ve etkili bir pazarlama stratejisi oluşturmak istiyorsanız, bize ulaşın. Mg Promosyon ile işbirliği yaparak markanızı güçlendirin!
-       </div>  
+    <p className="py-5">Kalite ve Dayanıklılık, bizim için temel önceliklerden biridir. Müşterilerimizin markalarını en iyi şekilde temsil edebilmeleri için yüksek kaliteli malzemeler kullanıyoruz.</p>
+
+    <p className="py-5">Yaratıcılık ve Tasarım da önem verdiğimiz unsurlardan biridir. Özel logolar, marka renkleri ve dikkat çekici grafiklerle, müşterilerimize etkileyici bir marka deneyimi yaşatmayı amaçlıyoruz.</p>
+
+    <p className="py-5">Çeşitlilik ve Esneklik, müşterilerimize geniş bir ürün yelpazesi sunmamızı sağlar. İhtiyaçlarına özel çözümler bulmalarına olanak tanır.</p>
+
+    <p className="py-5">Hızlı ve Güvenilir Hizmet, siparişlerinizi en kısa sürede teslim etmek için çaba gösteriyoruz. Müşteri memnuniyetini ön planda tutarak, güvenilir ve hızlı bir hizmet sunuyoruz.</p>
+
+    <p className="py-5">Mg Promosyon olarak, iş ortaklarımıza en iyi promosyon çözümlerini sunma misyonuyla hareket ediyoruz. Siz de markanızı öne çıkarmak, müşterilerinize unutulmaz deneyimler yaşatmak ve etkili bir pazarlama stratejisi oluşturmak istiyorsanız, bize ulaşın. Mg Promosyon ile işbirliği yaparak markanızı güçlendirin!</p>
+    </div>
 
        <div className="w-full  sm:w-1/2  py-20 px-10">
 

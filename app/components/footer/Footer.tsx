@@ -34,6 +34,17 @@ const Footer = () => {
                    <p className="mb-2">Mg Promosyon, çakmak başta olmak üzere pek çok üründe promosyon ihtiyaçlarını karşılamaktadır. Toptan satış fırsatı ile promosyon ürünlerde Mg Promosyon müşterilerine kaliteli çözümler sunmaktadır.</p>
                    <p>&copy; {new Date().getFullYear()} Mg Promosyon. Tüm Hakları Saklıdır</p>
 
+                   <div className="flex gap-2 pt-5">
+                     <Link href="https://www.facebook.com/profile.php?id=61554438080247">
+                        <MdFacebook size={24}/>
+                     </Link>
+                     
+                     <Link href="https://www.instagram.com/mg.promosyon/">
+                        <AiFillInstagram size={24}/>
+                     </Link>
+                     
+                     
+                  </div>
                 </div>
                
 

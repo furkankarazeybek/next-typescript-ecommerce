@@ -58,7 +58,7 @@ const AddRating:React.FC<AddRatingProps> = ({product, user}) => {
         reset();
 
         }).catch((error) => {
-            toast.error('Something went wrong')
+            toast.error('Değerlendirme yapabilmeniz için siparişin tarafınıza gönderilmiş olması gereklidir !')
         }).finally(() => {
             setIsLoading(false)
         })
@@ -101,7 +101,7 @@ const AddRating:React.FC<AddRatingProps> = ({product, user}) => {
         errors= {errors}
         required
         />
-        <Button label={isLoading ? "Yükleniyor" : 'Ürünü Değerlendir'}  onClick={handleSubmit(onSubmit)} />
+        <Button label={isLoading ? "..." : 'Ürünü Değerlendir'}  onClick={handleSubmit(onSubmit)} />
    </div>
 
     </>
